@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Image Captioning</h1>
+        <form action="{{ url_for('caption_image') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/*" required>
+            <select name="model" required>
+                <option value="mobilenet">MobileNetV2</option>
+                <option value="inception">InceptionV3</option>
+                <option value="resnet">ResNet50</option>
+                <option value="transformer">Transformer</option>
+                <option value="blip">BLIP</option>
+            </select>
+            <button type="submit">Upload</button>
+        </form>
+        {% if image_url %}
+        <div class="result">
+            <h2>Result</h2>
+            <!-- <img src="{{ url_for('static', filename=image_url) }}" alt="Uploaded Image"> -->
+            <p><strong>Caption ({{ model }}):</strong> {{ caption }}</p>
+            <p><strong>Processing Time:</strong> {{ time }} seconds</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
