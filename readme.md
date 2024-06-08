@@ -19,12 +19,12 @@ Before running the application, make sure you have the following installed:
 
 1. Clone the repository:
 ```sh
-git clone https://github.com/your-username/image-captioning-api.git
+git clone https://github.com/ShawnAlisson/CaptionPicture.git
 ```
 
 2. Navigate to the project directory:
 ```sh
-cd image-captioning-api
+cd CaptionPicture
 ```
 3. Install the required Python packages:
 ```sh
