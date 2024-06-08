@@ -30,6 +30,15 @@ cd CaptionPicture
 ```sh
 pip install -r requirements.txt
 ```
+
+## Usage
+
+1. Start the Flask server:
+```sh
+python app.py
+```
+2. Open a web browser and go to `http://localhost:8000` to access the web interface.
+
 ## Models
 
 - **MobileNetV2**: A lightweight convolutional neural network architecture.
